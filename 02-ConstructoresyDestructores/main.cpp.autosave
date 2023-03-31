@@ -1,0 +1,24 @@
+#include <QCoreApplication>
+#include <QDebug>
+
+
+struct Punto2D{
+    double x;  
+    double y;
+    
+    //dentro de la estructura creamos tanto el constructor como el destructor.
+    //el constructor tiene el mismo nombre de la estructura
+    
+    Punto2D();
+        Punto2D();
+    
+};
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+    
+    
+    
+    return a.exec();
+}
