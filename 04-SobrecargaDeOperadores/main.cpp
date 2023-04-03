@@ -82,6 +82,67 @@ Punto2D operator/(const Punto2D &p, Punto2D &q){
     return resultadoDeLaDivision;
 }
 
+bool operator==(const Punto2D &p, Punto2D &q){
+    if(p.x() == q.x() && p.y() == q.y()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool operator!=(const Punto2D &p, Punto2D &q){
+    return !(p==q);
+}
+
+//bool operator!=(const Punto2D &p, Punto2D &q){
+//    if(p.x() != q.x() || p.y() != q.y()){
+//        return true;
+//    }
+//    else{
+//        return false;
+//    }
+//}
+
+class Persona{
+public:
+    Persona(const QString &nombre, int edad);
+    int edad() const;
+    QString nombre() const;
+private:
+    QString m_nombre;
+    int m_edad;
+};
+
+Persona::Persona(const QString &nombre, int edad){
+    m_nombre = nombre;
+    m_edad = edad;
+};
+
+int Persona::edad() const{
+    return m_edad;
+};
+
+QString Persona::nombre() const{
+    return m_nombre;
+};
+
+bool operator<(const Persona &A, const Persona &B){
+    return A.edad() < B.edad();
+};
+
+bool operator>(const Persona &A, const Persona &B){
+    return A.edad() > B.edad();
+};
+
+bool operator>=(const Persona &A, const Persona &B){
+    return A.edad() >= B.edad();
+};
+
+bool operator<=(const Persona &A, const Persona &B){
+    return A.edad() <= B.edad();
+};
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -99,6 +160,23 @@ int main(int argc, char *argv[])
     multiplicacionpq.imprime();
     divisionpq.imprime();
 
+    Punto2D A(1.0, 1.0);
+    Punto2D B(1.0, 4.0);
+    if(A == B){
+        qDebug() << "A == B";
+    }
+    else{
+        qDebug() << "A != B";
+    };
+
+    Persona C("Carlos", 25);
+    Persona D("Pedro", 25);
+
+    if(C <= D){
+    qDebug() << C.nombre() << "es menor o tiene igual edad que" << D.nombre();
+    }
+
+    //de toda la manera antes expuesta, es como se sobrecargan los operadores.
 
     return a.exec();
 }
