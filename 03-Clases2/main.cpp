@@ -8,7 +8,7 @@
 //todo lo que esté despues de los dos puntos será público, y tendremos permiso para utilizarlo
 //en las clases se recomienda que los metodos sean público en su mayoria y que las variables sean privadas.
 //la diferencia a fin de cuentas entre struct y clases, es que las clases indican que es lo privado y que es lo público.
-
+//De esta manera, tenemos el código todo encapsulado, de manera que las variables no puedan modificarse solas, sino siempre a través de un método.
 class Persona{
     //implicitamente si te colocan acá las variables, se consideras privadas o se puede indicar la palabra "private"
     QString nombre;
