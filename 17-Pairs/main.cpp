@@ -39,14 +39,14 @@ int main(int argc, char *argv[])
 
     //creo el vector, de pares, de dos valores QString, llamado english Spanish
     //crearemos un vector de pair, un diccionario English-Spanish
-    std::vector<std::pair<QString, QString>> englishSpanish;
+    std::vector<std::pair<QString, QString>> diccionarioEnglishSpanish;
 
-    agregaPalabra(englishSpanish, "car", "carro");
-    agregaPalabra(englishSpanish, "dog", "perro");
-    agregaPalabra(englishSpanish, "cat", "gato");
+    agregaPalabra(diccionarioEnglishSpanish, "car", "carro");
+    agregaPalabra(diccionarioEnglishSpanish, "dog", "perro");
+    agregaPalabra(diccionarioEnglishSpanish, "cat", "gato");
 
-    std::vector<std::pair<QString, QString>>::const_iterator i = englishSpanish.cbegin();
-    const std::vector<std::pair<QString, QString>>::const_iterator end = englishSpanish.cend();
+    std::vector<std::pair<QString, QString>>::const_iterator i = diccionarioEnglishSpanish.cbegin();
+    const std::vector<std::pair<QString, QString>>::const_iterator end = diccionarioEnglishSpanish.cend();
     for (; i != end; ++i)
     {
         imprime2(*i);
