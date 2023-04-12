@@ -37,5 +37,8 @@ int main(int argc, char *argv[])
     std::for_each(conjunto.begin(), conjunto.end(), imprime2);  qDebug() << "\n";
     std::for_each(diccionario.begin(), diccionario.end(), imprime3);  qDebug() << "\n";
 
+    //El for each es para recorrer los elementos de colecciones.
+    //Esto hace las tareas de los iteradores o un for normal.
+
     return a.exec();
 }
